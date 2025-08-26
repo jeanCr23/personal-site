@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hazel's Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="min-h-screen bg-white p-8 font-mono">
+    <div class="max-w-2xl mx-auto space-y-6">
+      <!-- Header -->
+      <div class="border-b border-black pb-4">
+        <h1 class="text-2xl text-black">hi! I'm hazel 🎵</h1>
+      </div>
+
+      <!-- Who am I -->
+      <div class="border-b border-black pb-4">
+        <button
+          class="flex items-center gap-2 text-base text-black font-mono collapsible"
+        >
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          who am I??
+        </button>
+        <div class="content hidden mt-3 text-black leading-relaxed font-mono">
+          I'm in my final year as an accounting major. I get a lot of energy
+          from being creative, and right now here are a few things i'm diving
+          into!!
+          <ol>
+            <li>
+              <b><u>animation</u></b> - making my first ever animated short film
+            </li>
+            <li>
+              <b><u>web design</u></b> - in my free time i like to make cute
+              little desktop apps and games
+            </li>
+            <li>
+              <b><u>marketing</u></b> - ugc + making videos for my companies
+            </li>
+            <li>
+              <b><u>business</u></b> - in the process of starting a jewelry
+              business w my best friend!
+            </li>
+            <li>
+              <b><u>other stuff</u></b> - writing, making silly videos for my
+              future self, playing guitar, fostering cats
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="border-b border-black pb-4">
+        <button
+          class="flex items-center gap-2 text-base text-black font-mono collapsible"
+        >
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          links
+        </button>
+        <div class="content hidden mt-3 space-y-2">
+          <p>find me here!</p>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="flex items-center underline text-black font-mono"
+          >
+            <i data-lucide="instagram" class="w-4 h-4 mr-2"></i> Instagram
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="flex items-center underline text-black font-mono"
+          >
+            <i data-lucide="twitter" class="w-4 h-4 mr-2"></i> Twitter
+          </a>
+        </div>
+      </div>
+
+      <!-- Favorite Song -->
+      <div class="border-b border-black pb-4">
+        <button
+          class="flex items-center gap-2 text-base text-black font-mono collapsible"
+        >
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          my favorite song rn
+        </button>
+        <div class="content hidden mt-3 text-black font-mono">
+          time in a bottle - jim croce
+        </div>
+      </div>
+
+      <!-- Resume -->
+      <div class="border-b border-black pb-4">
+        <button
+          class="flex items-center gap-2 text-base text-black font-mono collapsible"
+        >
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          resume
+        </button>
+        <div class="content hidden mt-3">
+          <a
+            href="#"
+            download
+            class="flex items-center underline text-black font-mono"
+          >
+            <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Download Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Dopamine Boost -->
+      <div class="border-b border-black pb-4">
+        <button
+          class="flex items-center gap-2 text-base text-black font-mono collapsible"
+        >
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          dopamine boost video - link to a cat video
+        </button>
+        <div class="content hidden mt-3">
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            class="underline text-black font-mono"
+          >
+            a cat video!
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="pt-4">
+        <p class="text-black font-mono">thanks for visiting ❤</p>
+      </div>
+    </div>
+
+    <script>
+      lucide.createIcons();
+
+      document.querySelectorAll(".collapsible").forEach((button) => {
+        button.addEventListener("click", () => {
+          const icon = button.querySelector("i");
+          const content = button.nextElementSibling;
+
+          if (content.classList.contains("hidden")) {
+            content.classList.remove("hidden");
+            icon.setAttribute("data-lucide", "chevron-down");
+          } else {
+            content.classList.add("hidden");
+            icon.setAttribute("data-lucide", "chevron-right");
+          }
+          lucide.createIcons();
+        });
+      });
+    </script>
+  </body>
+</html>
